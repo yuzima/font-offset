@@ -18,6 +18,8 @@ const { top: topOffset, bottom: bottomOffset } = getOffset(openSansMetrics);
 Here is an online demo which demostrates how to draw the lines perfectly attach to the edges of charactors:
 [CodeSandBox](https://codesandbox.io/s/modest-hofstadter-pdbs1?file=/src/index.js:540-903)
 
+![](./screenshot.jpg)
+
 ## Explanation
 
 The font's basic metrics are like this picture shows:
