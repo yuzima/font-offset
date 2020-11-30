@@ -36,14 +36,14 @@ This picture explain how font actually is rendered in browser:
 
 The `content-area` is the height from `ascender line` to `descnder line`.
 
-When we set `line-height` equals `font-size` which is `1em` or `100px`, it doesn't mean the `content-area` which is distance from `ascender line` to `descnder line` is 100px heigh. The `content-area` block may over the size of `line-height` block; There may have overflow parts, but this overflow parts are evenly distributed on top and bottom. 
+When we set `line-height` equals to `font-size` which is `1em` or `100px`, it doesn't mean the `content-area` is 100px heigh. The `content-area` block may over the size of `line-height` block; There may have overflow parts, but the overflow are evenly distributed on top and bottom. 
 
 So the final calculation is:
 ```javascript
 const bodyHeight = ascender - descender;
 const halfOverflow = (bodyHeight - unitsPerEm) / 2;
 const bottom = (- descender - halfOverflow) / unitsPerEm;
-  const top = (ascender - sCapHeight - halfOverflow) / unitsPerEm;
+const top = (ascender - sCapHeight - halfOverflow) / unitsPerEm;
 ```
 
 
