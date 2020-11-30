@@ -22,7 +22,7 @@ Here is an online demo which demostrates how to draw the lines perfectly attach 
 
 ## Explanation
 
-The font's basic metrics are like this picture shows:
+Every font has its own metrics. They are different from other fonts'. Generally, the font's ascender/descender are like this picture shows:
 
 ![](https://how-ocr-works.com/images/resolution/letter-body.png)
 
@@ -31,12 +31,17 @@ The font's basic metrics are like this picture shows:
 - sCapHeight: from `base line` to `cap line`
 - unitsPerEm: specifies the number of coordinate units on the "em square".
 
-Every font has its own metrics. They are different from other fonts'.
+But for metrics of font, ascender/descender are different from general ones. 
+
+Take the example of `Catamaran`, 
+
+- generals Ascent/Descent: ascender is 770 and descender is 230. Used for character drawings.
+- metrics Ascent/Descent: ascender is 1100 and descender is 540. Used for content-area’s height.
 
 This picture explain how font actually is rendered in browser:
 ![](./font.png)
 
-The `content-area` is the height from `ascender line` to `descnder line`.
+The `content-area` is the height of metric `ascender` plus metric `descnder`.
 
 When we set `line-height` equals to `font-size` which is `1em` or `100px`, it doesn't mean the `content-area` is 100px heigh. The `content-area` block may over the size of `line-height` block; There may have overflow parts, but the overflow are evenly distributed on top and bottom. 
 
