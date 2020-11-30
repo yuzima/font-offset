@@ -33,7 +33,9 @@ Every font has its own metrics. They are different from other fonts'. Generally,
 
 But for metrics of font, ascender/descender are different from general ones. 
 
-Take the example of `Catamaran`, 
+Take the example of font `Catamaran`, 
+
+![](https://iamvdo.me/content/01-blog/30-css-avance-metriques-des-fontes-line-height-et-vertical-align/font-forge-metrics.png)
 
 - generals Ascent/Descent: ascender is 770 and descender is 230. Used for character drawings.
 - metrics Ascent/Descent: ascender is 1100 and descender is 540. Used for content-area’s height.
